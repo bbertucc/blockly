@@ -1,0 +1,46 @@
+/*--------------------------------------------------------------
+# Standard Variables & Document Properties
+--------------------------------------------------------------*/
+
+// Colors
+$color-standard: #231F20;
+$color-alternate: #2A98D3;
+$color-white: #ffffff;
+$color-light_shade: #EBEBEB;
+$color-dark_shade: #666666;
+$color-translucent: rgba(0, 0, 0, 0.15);
+
+// Typeface Settings
+$font-family-standard: 'Noto Serif', serif;
+$font-FontAwesome: 'FontAwesome';
+$font-weight-bold: 700;
+$font-weight-standard: 400;
+
+// Item specific variables
+$line-height-standard: 1.4em;
+
+// Font Settings
+$font-largest_standard: $font-weight-standard 40px/1.4em $font-family-standard;
+$font-larger_standard: $font-weight-standard 30px/1.4em $font-family-standard;
+$font-standard: $font-weight-standard 20px/1.4em $font-family-standard;
+$font-smaller_standard: $font-weight-standard 14px/1.4em $font-family-standard;
+
+// Single Cell Settings
+$cell-standard: 28px;
+
+// Screen Sizes
+$screen-mobile: $cell-standard*14;
+$screen-larger_mobile: $cell-standard*22;
+$screen-tablet: $cell-standard*33;
+$screen-smaller_desktop: $cell-standard*42;
+$screen-desktop: $cell-standard*51;
+
+// Border Settings
+$border-width-standard: 1px;
+$border-standard: $border-width-standard solid $color-translucent;
+$border-radius-standard: 6px;
+$border-radius-circle: 50%;
+
+// Shadows
+$box-shadow-standard: 0px 1px 12px -1px $color-standard;
+$text-shadow-standard: 1px 1px 3px $color-dark_shade;

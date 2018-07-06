@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+# Styles for header.php
+--------------------------------------------------------------*/
+.header {
+  .header-content{
+    
+    // Logo
+    .content-logo{
+      .logo-link{
+        .link-image{}
+      }
+    }
+    
+    // Navigation
+    .content-menu{
+      @media only screen and (max-width: $screen-tablet){
+        display: none;
+      }
+      .menu-item{}
+    }
+    
+    // Toggle
+    .content-toggle{
+      display: none;
+      @media only screen and (max-width: $screen-tablet){
+        display: block;
+      }
+      &:before{
+        @include fa-icon();
+        content: $fa-var-bars
+      }
+    }
+
+    // Mobile Toggle Settings (Triggered via themeHeaderNavigation.js)
+    &.navigationOpen{
+      
+      // Toggle
+      .content-toggle{
+        &:before{
+          content: $fa-var-close
+        }
+      }
+      
+      // Menu
+      .content-menu{
+        display: block;
+        .menu-item{
+          display: block;
+          &:first-of-type{}
+        }
+      }
+      
+    }
+    
+  }  
+  
+}

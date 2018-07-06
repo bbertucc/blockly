@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+# Loop_content content requires the loop to exist
+--------------------------------------------------------------*/
+
+// Listed Post (loop_content-listed_post.php)
+.loop_content-listed_post{
+  display: flex;
+  background: $color-white;
+  margin: $cell-standard $cell-standard/4;
+  @media only screen and (max-width: $screen-larger_mobile){
+    flex-wrap: wrap;
+  }
+
+  // Image
+  .listed_post-image{
+    max-width: 50%;
+    min-width: 50%;
+    @media only screen and (max-width: $screen-larger_mobile){
+      max-width: 100%;
+      min-width: 100%;
+    }
+    .image-the_image{}
+  }
+  
+  // Text
+  .listed_post-text{
+    padding: $cell-standard;
+    
+    // Categories
+    .text-categories{
+      font: $font-smaller_standard;
+      margin-bottom: $cell-standard/2;
+      a{
+        display: inline-block;
+        text-decoration: none;
+        border-radius: $border-radius-standard;
+        font-weight: bold;
+        color: $color-white;
+        padding: $cell-standard/4;
+        background: $color-alternate; 
+        margin-right: $cell-standard/4;
+      }      
+    }
+    
+    // Title
+    .text-title{
+      font: $font-larger_standard;
+      font-weight: $font-weight-bold;
+      color: $color-standard;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    
+    // Excerpt
+    .text-excerpt{
+      font: $font-standard;
+    }
+    
+  }
+  
+}
+
+// Pagination (loop_content-pagination.php)
+.loop_content-pagination{
+  a{    
+    &.page_numbers{}
+  }
+  .current{}
+  .next, .prev{}
+}
+
+// Comment (loop_content-error_message.php)
+.loop_content-comments{
+  
+  // List
+  .comments-list{}
+  
+  // Navigaiton
+  .comments-navigation{
+    .navigation-previous{}
+    .navigation-next{}
+  }
+  
+  // Fallback
+  .comments-fallback{}
+  
+}
+
+// Error Message (loop_content-error_message.php)
+.loop_content-error_message{
+  padding: $cell-standard*3 $cell-standard;
+  text-align: center;
+  
+  // Title
+  .error_message-title{
+    font: $font-larger_standard;
+  }
+  
+  // Body
+  .error_message-body{
+    font: $font-standard;
+  }
+  
+}
+
+// Post Content (loop_content-post_content.php)
+.loop_content-post_content{
+  padding: $cell-standard;
+
+  // Title
+  .post_content-the_title{
+    font: $font-largest_standard;
+    font-weight: $font-weight-bold;
+    border-bottom: $border-standard;
+    padding: $cell-standard 0;
+  }
+
+  // The Content
+  .post_content-the_content{
+    font: $font-standard;
+
+    p:first-of-type{
+      margin-top: 0;
+    }
+    
+  }
+  
+}
