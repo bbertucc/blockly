@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# Quote Block
+--------------------------------------------------------------*/
+.wp-block-quote{
+
+  // Large Style
+  &.is-style-large{
+    margin: $cell-standard auto;
+  }
+
+  // Paragraph
+  p{}
+
+  // Citation
+  cite{}
+
+}

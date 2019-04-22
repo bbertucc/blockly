@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+# Global Colors (Declared in block_setup.php)
+--------------------------------------------------------------*/
+
+// Variables
+$color-blue: #007fac;
+$color-dark: #282828;
+$color-darker: #191e23;
+$color-black: #000;
+$color-light: #40464d;
+$color-lighter: #8f98a1;
+$color-lightest: #f3f3f4;
+$color-white: #ffffff;
+$color-translucent: rgba(0,0,0,0.6);
+
+// Block Backgrounds
+.has-blue-background-color{
+  background: $color-blue;
+}
+.has-dark-background-color{
+  background: $color-dark;  
+}
+.has-darker-background-color{
+  background: $color-darker;  
+}
+.has-black-background-color{
+  background: $color-black;  
+}
+.has-light-background-color{
+  background: $color-light;  
+}
+.has-lighter-background-color{
+  background: $color-lighter  
+}
+.has-lightest-background-color{
+  background: $color-lightest;  
+}
+.has-white-background-color{
+  background: $color-white;  
+}
+.has-translucent-background-color{
+  background: $color-translucent;  
+}
+
+// Global Classes
+.has-lightest-background-color{
+
+}

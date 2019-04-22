@@ -1,0 +1,15 @@
+/*--------------------------------------------------------------
+# Button Block
+--------------------------------------------------------------*/
+.wp-block-button{
+
+  // Outlined Style
+  &.is-style-outline{}
+
+  // Squared Style
+  &.is-style-squared{}
+
+  // Button Link
+  a{}
+
+}

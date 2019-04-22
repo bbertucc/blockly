@@ -1,12 +1,30 @@
 <?php
-// Display Staging/Local Server notice on WP Backend
-function frontend_testing_server_notice() {
-  $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-  if ( (strpos($url,'staging') !== false) || $_SERVER["SERVER_ADDR"] == '::1' ) {
-  	$class = 'notice notice-warning callout callout-info callout-full';
-  	$message = __( '<strong>Warning:</strong> You are currently on a testing server. <strong>Any changes may be overwritten.</strong>', 'theme' );
+// =====================================================================
+// ADMIN NOTICES
+// =====================================================================
+// These are different notices that are displayed
+// in the WordPress dashboard. All notices should
+// be directly referencing something to do with 
+// the theme.
+// =====================================================================
+function theme_admin_notices() {
+
+	// Gutenberg Notice
+	$gutenberg = ! ( false === has_filter( 'replace_editor', 'gutenberg_init' ) );
+	$block_editor = version_compare( $GLOBALS['wp_version'], '5.0-beta', '>' );
+	if( !$gutenberg && !$block_editor ) {
+		$class = 'notice notice-error gutenberg';
+		$message = __( '<strong>No block editor!</strong> Please contact tech support immediately to resolve the issue.', 'blockly' );
+		printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
+	}
+
+	// ACF Notice
+  if( !class_exists('acf') ) {
+  	$class = 'notice notice-error acf';
+  	$message = __( '<strong>ACF is missing!</strong> Please contact tech support immediately to resolve the issue.', 'blockly' );
   	printf( '<div class="%1$s"><p>%2$s</p></div>', $class, $message ); 
   }
+
 }
-add_action( 'admin_notices', 'frontend_testing_server_notice' );
+add_action( 'admin_notices', 'theme_admin_notices' );
 ?>

@@ -1,49 +1,66 @@
+/*--------------------------------------------------------------
+# GENERAL THEME STYLES
+--------------------------------------------------------------*/
+
 /*!
-Theme Name: Gutenberg Boilerplate Theme
-Theme URI: https://github.com/bbertucc
+Theme Name: Blockly
+Theme URI: https://github.com/bbertucc/blockly
 Author: Blake Bertuccellli
 Author URI: https://github.com/bbertucc
-Description: Based on Blake's starter theme.
+Description: A starter theme, supporting the block editor.
 Version: 1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: Bb
-Tags:
+Text Domain: blockly
+Tags: block-styles, wide-blocks
 */
 
-/*--------------------------------------------------------------
-# Standard Variables
---------------------------------------------------------------*/
-@import "styles/variables";
-
-/*--------------------------------------------------------------
-# Fonts
---------------------------------------------------------------*/
-@import "styles/fonts/font-awesome/scss/font-awesome";
+// Fonts
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i');
 
-/*--------------------------------------------------------------
-# Mixins
---------------------------------------------------------------*/
-@import "styles/mixins/buttons";
-@import "styles/mixins/responsive";
+// Globals (What affects every style)
+@import "styles/globals/colors";
+@import "styles/globals/typefaces";
+@import "styles/globals/sizing";
+@import "styles/globals/alignments";
+@import "styles/globals/elements";
 
-/*--------------------------------------------------------------
-# Template Parts
---------------------------------------------------------------*/
-@import "styles/template_parts/features";
-@import "styles/template_parts/footer";
-@import "styles/template_parts/header";
-@import "styles/template_parts/layouts";
-@import "styles/template_parts/loop_content";
+// Layouts (Structure of pages)
+@import "styles/layouts/archive";
+@import "styles/layouts/single";
 
-/*--------------------------------------------------------------
-# Additional Elements: Plugin Styles, Includes, Helper Classes..
---------------------------------------------------------------*/
+// Blocks (Gutenberg Block Styles)
+@import "styles/blocks/audio";
+@import "styles/blocks/gallery";
+@import "styles/blocks/pullquote";
+@import "styles/blocks/button";
+@import "styles/blocks/heading";
+@import "styles/blocks/quote";
+@import "styles/blocks/categories";	
+@import "styles/blocks/image";
+@import "styles/blocks/separator";
+@import "styles/blocks/code";
+@import "styles/blocks/instagram_embed";	
+@import "styles/blocks/spacer";
+@import "styles/blocks/columns";
+@import "styles/blocks/list";
+@import "styles/blocks/twitter_embed";
+@import "styles/blocks/cover";
+@import "styles/blocks/paragraph";
+@import "styles/blocks/video";
+@import "styles/blocks/verse";
+@import "styles/blocks/table";
+@import "styles/blocks/media_and_text";
+@import "styles/blocks/facebook_embed";	
+@import "styles/blocks/post_archive";	
+@import "styles/blocks/wordpress_embed";
+@import "styles/blocks/file";
+@import "styles/blocks/preformatted";	
+@import "styles/blocks/youtube_embed";
+
+// Everything else ("/etc")
+@import "styles/etc/header";
+@import "styles/etc/footer";
+@import "styles/etc/classic_editor";
 @import "styles/etc/includes";
-@import "styles/etc/wordpress";
-
-/*--------------------------------------------------------------
-# Document Properties
---------------------------------------------------------------*/
-@import "styles/document";
+@import "styles/etc/accessibility";

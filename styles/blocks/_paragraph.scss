@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+# Paragraph Block
+--------------------------------------------------------------*/
+p{
+
+  // Paragraph with Drop Cap
+  &.has-drop-cap:not(:focus):first-letter{
+    font-weight: $font-weight-bold;
+  }
+
+  // Small Paragraph
+  &.has-small-font-size{}
+
+  // Regular Paragraph
+  &.has-regular-font-size{}
+
+  // Large Paragraph
+  &.has-large-font-size{ }
+
+  // Huge Paragraph
+  &.has-huge-font-size{}
+
+}

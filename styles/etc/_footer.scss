@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------
+# Styles for footer.php
+--------------------------------------------------------------*/
+.footer{
+  padding: $cell-standard*2;
+  border-top: 1px solid $color-lighter;
+  text-align: center;
+  font: $font-small_p;
+
+  // Copyright Info
+  .footer-copyright_info{
+    color: $color-light;
+  }
+
+  // Menu
+  .footer-menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 0 $cell-standard/2 0;
+    padding: 0;
+    .menu-item{
+      padding: 0 $cell-standard/2 0 0;
+      &:last-of-type{
+        padding-right: 0;
+      }
+      a{
+        color: $color-light;
+      }
+    }
+  }
+
+}

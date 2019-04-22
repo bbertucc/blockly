@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+# Gallery Block
+--------------------------------------------------------------*/
+ul.wp-block-gallery{
+
+
+  // 1 Column
+  &.columns-1{}
+
+  // 2 Columns
+  &.columns-2{}
+
+  // 3 Columns
+  &.columns-3{}
+
+  // Cropped Images
+  .is-cropped{}
+
+  // Gallery Item
+  li.blocks-gallery-item{
+    figure{
+      img{}
+    }
+    figcaption{}
+  }
+
+}

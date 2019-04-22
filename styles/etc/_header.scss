@@ -1,0 +1,107 @@
+/*--------------------------------------------------------------
+# Styles for header.php
+--------------------------------------------------------------*/
+.header {
+  text-align: center;
+  border-bottom: 1px solid $color-lighter;
+  padding-top: $cell-standard*2;
+
+  // Logo (Optional)
+  .header-logo{
+    margin-bottom: $cell-standard;
+    .logo-link{
+      .link-image{}
+    }
+  }
+
+  //Title and Description
+  .header-title_and_tagline{
+    display: block;
+    color: $color-darker;
+    text-decoration: none;
+    margin-bottom: $cell-standard*2;
+    .title_and_tagline-title{
+      font: $font-h1;
+      line-height: 1em;
+    }
+    .title_and_tagline-tagline{
+      font: $font-h3;
+      line-height: 1em;
+      margin-top: $cell-standard;
+    }
+  }
+
+  // Navigation
+  .header-menu{
+    border-top: 1px solid $color-lighter;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    @media only screen and (max-width: $screen-tablet){
+      display: none;
+    }
+    .menu-item{
+      margin: 0;
+      border-right: 1px solid $color-lighter;
+      &:first-of-type{
+        border-left: 1px solid $color-lighter;
+      }
+      &.current_page_item{
+        a{
+          background: $color-lighter;
+          color: $color-white;
+          &:hover{
+            background: $color-lighter;
+          }
+        }
+      }
+      a{
+        display: block;
+        padding: $cell-standard/2 $cell-standard;
+        text-decoration: none;
+        transition: .2s background;
+        font: $font-medium_p;
+        font-weight: $font-weight-bold;
+        &:hover{
+          background: $color-blue;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  
+  // Toggle
+  .header-toggle{
+    display: none;
+    @media only screen and (max-width: $screen-tablet){
+      display: block;
+    }
+    &:before{
+      content: 'Menu'
+    }
+  }
+
+  // Mobile Toggle Settings (Triggered via themeHeaderNavigation.js)
+  &.navigationOpen{
+    
+    // Toggle
+    .header-toggle{
+      &:before{
+        content: "Close Menu"
+      }
+    }
+    
+    // Menu
+    .header-menu{
+      display: block;
+      .menu-item{
+        display: block;
+        &:first-of-type{}
+      }
+    }
+    
+  }
+  
+}

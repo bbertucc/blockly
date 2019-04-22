@@ -1,13 +1,17 @@
 <?php
+// =====================================================================
+// INDEX
+// =====================================================================
+// The site's most basic pieces.
+// =====================================================================
+
 // Header
-get_template_part('template_parts/header');
+get_header();
 
 // Standard Layouts
-get_template_part('template_parts/layout', 'single_page');
-get_template_part('template_parts/layout', 'single_post');
-get_template_part('template_parts/layout', 'archive');
-get_template_part('template_parts/layout', 'error_404');
+get_template_part('layouts/single');
+get_template_part('layouts/archive');
   
 // Footer
-get_template_part('template_parts/footer');
+get_footer();
 ?>

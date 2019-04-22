@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+# Single Content Layout (layouts/single.php)
+--------------------------------------------------------------*/
+.layout-single{
+
+  // Loop
+  .single-loop{
+    max-width: $container-standard;
+    margin: 0 auto;
+    
+    // Title
+    .loop-the_title{
+      font: $font-h1;
+      padding: $cell-standard 0 0;
+    }
+
+    // The Content
+    .loop-the_content{}
+  
+  }
+
+  // Error
+  .single-error{
+    max-width: $screen-tablet;
+    padding: $cell-standard*2 $cell-standard/2;
+    margin: 0 auto;
+    text-align: center;
+      
+    // Title
+    .error-title{
+      font: $font-h2;
+    }
+    
+    // Body
+    .error-body{
+      font: $font-medium_p;
+    }
+      
+  }
+
+}

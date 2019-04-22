@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+# Cover Block
+--------------------------------------------------------------*/
+.wp-block-cover{
+
+  // Background is dimmed
+  &.has-background-dim{
+    &:before{}
+  }
+
+  // Hack to remove margin on top cover blocks
+  &.alignfull{
+    margin-top: 0;
+  }
+
+  // Parallax
+  &.has-parallax{
+    &:before{}
+  }
+
+  // Content is left aligned
+  .has-left-content{}
+
+  // Content is right aligned
+  .has-right-content{}
+
+  // Cover Text Element
+  .wp-block-cover-text{}
+  
+}

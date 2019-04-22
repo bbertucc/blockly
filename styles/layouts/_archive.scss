@@ -1,0 +1,75 @@
+/*--------------------------------------------------------------
+# Archive Layout (layouts/archive.php)
+--------------------------------------------------------------*/
+.layout-archive{
+  background: $color-lightest;
+  padding-bottom: $cell-standard*2;
+
+  // Archive Title  
+  .archive-title{
+    font: $font-h2;
+    text-align: center;
+    padding: $cell-standard*2 0;
+
+  }
+  
+  // Loop Content
+  .archive-loop{
+    max-width: $container-standard;
+    margin: 0 auto;
+
+    // Listed Post
+    .loop-listed_post{
+      background: $color-white;
+      .listed_post-image{}
+      .listed_post-post{
+        padding: $cell-standard;
+        .post-meta{
+          font: $font-small_p;
+          a{
+            text-decoration: none;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+        .post-title{
+          font: $font-h3;
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+        .post-excerpt{
+          font: $font-medium_p;
+        }
+      }
+    }
+
+    // Pagination
+    .loop-pagination{
+    }
+
+  }
+
+  // Error
+  .archive-error{
+    max-width: $screen-tablet;
+    background: $color-white;
+    padding: $cell-standard*2 $cell-standard/2;
+    margin: 0 auto;
+    text-align: center;
+      
+    // Title
+    .error-title{
+      font: $font-h2;
+    }
+    
+    // Body
+    .error-body{
+      font: $font-medium_p;
+    }
+      
+  }
+
+}
