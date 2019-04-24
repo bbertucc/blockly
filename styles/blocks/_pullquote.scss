@@ -2,12 +2,23 @@
 # Pullquote Block
 --------------------------------------------------------------*/
 .wp-block-pullquote{
+  border-top: 4px solid $color-light;
+  border-bottom: 4px solid $color-light;
+  color: $color-light;
 
+  // Blockquote
+  blockquote{
 
-  // Paragraph
-  p{}
+    // Paragraph
+    p{}
 
-  // Citation
-  cite{}
+    // Citation
+    cite{
+      font: $font-small_p;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+  }
 
 }
