@@ -16,7 +16,7 @@ Blockly is a WordPress starter theme built to support "Gutenberg" blocks. Like [
 Lots of thought went into Blockly's structure. Checkout [/styles]. We're being explicit, while avoiding redundancy. All dependent styles are compiled into `styles.scss` and I've added easy to understand notes.
 
 ### Required Plug-ins
-To run Blockly properly, you'll need [Gutenberg] or the latest version of WordPress. [Advanced Custom Fields] is also required to hide and show content titles. You also will need a SASS compiler to generate CSS from the SCSS. 
+To run Blockly properly, you'll need version of WordPress. [Advanced Custom Fields] is also required to hide and show content titles. You also will need a SASS compiler to generate CSS from the SCSS. 
 
 ### Contributing
 This is an open repo! Add [Issues], [Fork], watch and contribute.
