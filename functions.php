@@ -23,7 +23,7 @@ require_once('includes/admin_notices.php' );
 // ACF Settings
 require_once('includes/acf_settings.php' );
 
-// Custom Menus
-require_once('includes/custom_menus.php' );
+// Menus
+require_once('includes/menus.php' );
 
 ?>

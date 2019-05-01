@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# 404 Layout (layouts/404.php)
+--------------------------------------------------------------*/
+.layout-404{
+  background: $color-lightest;
+  padding-bottom: $cell-standard*2;
+
+  // Error Message
+  [class="404-error_message"]{
+    padding: $cell-standard*2 0;
+
+    text-align: center;
+    .error_message-title{
+      font: $font-h2;
+    }
+    .error_message-body{
+      font: $font-medium_p;
+    }
+  }
+
+  // Sidebar
+  [class="404-sidebar"]{}
+
+}

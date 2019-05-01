@@ -13,8 +13,18 @@ if( is_archive() || is_home()  || is_search() ):
 <div class="layout-archive">
 
   <?php
-  // Archive Title
-  the_archive_title('<div class="archive-title">', '</div>');
+  // Posts Page Title
+  if(is_home()){
+
+    // The Posts Page Title
+    echo '<div class="archive-title">'.get_the_title(get_option( 'page_for_posts' )).'</div>';
+
+  }else{
+
+    // Archive Title
+    the_archive_title('<div class="archive-title">', '</div>');
+
+  }
 
   // Start Archive Loop
   if(have_posts()):

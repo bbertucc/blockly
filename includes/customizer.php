@@ -28,8 +28,8 @@ function theme_customizer_register( $wp_customize ) {
   );
 
   // Add "Embed Codes" Section, Controls and Settings  
-  $wp_customize->add_section( 'embed_codes', array(
-      'title' => __('Embed Codes', 'blockly'),
+  $wp_customize->add_section( 'theme_embed_codes', array(
+      'title' => __('Theme Embed Codes', 'blockly'),
       'description' => __('Tracking pixels, analytics codes, ..', 'blockly'),
       'priority' => 38,
     )
