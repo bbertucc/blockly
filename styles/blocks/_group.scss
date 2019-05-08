@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# Group Block
+--------------------------------------------------------------*/
+.wp-block-group{
+  padding: 1px 0;
+  
+  // All Children
+  & > *{
+    max-width: $container-standard;
+    margin: $cell-standard auto;
+  }
+
+  // Hack to allow nested block spacing in editor.
+  .block-editor-inner-blocks{
+    max-width: inherit;
+  }
+
+}

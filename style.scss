@@ -12,27 +12,29 @@ Version: 1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: blockly
-Tags: block-styles, wide-blocks
+Tags: block-styles, wide-blocks, one-column, left-sidebar, custom-logo, featured-images, theme-options	
 */
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i');
 
-// Globals (What affects every style)
+// Globals (Whate can affect every style)
 @import "styles/globals/colors";
 @import "styles/globals/typefaces";
 @import "styles/globals/sizing";
 @import "styles/globals/alignments";
 @import "styles/globals/elements";
 
-// Layouts (Structure of pages)
-@import "styles/layouts/404";
+
+// Layouts
 @import "styles/layouts/archive";
 @import "styles/layouts/single";
+@import "styles/layouts/404";
 
-// Blocks (Gutenberg Block Styles)
+// Blocks
 @import "styles/blocks/audio";
 @import "styles/blocks/gallery";
+@import "styles/blocks/group";
 @import "styles/blocks/pullquote";
 @import "styles/blocks/button";
 @import "styles/blocks/heading";
@@ -62,6 +64,7 @@ Tags: block-styles, wide-blocks
 // Everything else ("/etc")
 @import "styles/etc/header";
 @import "styles/etc/footer";
+@import "styles/etc/sidebar";
 @import "styles/etc/classic_editor";
 @import "styles/etc/includes";
 @import "styles/etc/accessibility";

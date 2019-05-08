@@ -17,13 +17,15 @@ require_once('includes/customizer.php' );
 // Block Setup
 require_once('includes/block_setup.php' );
 
+// Menus
+require_once('includes/menus.php' );
+
 // Admin Notices
 require_once('includes/admin_notices.php' );
 
 // ACF Settings
 require_once('includes/acf_settings.php' );
 
-// Menus
-require_once('includes/menus.php' );
-
+// Sidebars and Widgets
+require_once('includes/sidebars_and_widgets.php' );
 ?>

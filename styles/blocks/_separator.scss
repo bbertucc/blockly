@@ -5,6 +5,7 @@ hr.wp-block-separator{
   border: none;
   border-bottom: 2px solid $color-lighter;
   margin: 1.65em auto;
+  @include alignStandard();
 
   // Short Line Separator
   &:not(.is-style-wide):not(.is-style-dots){

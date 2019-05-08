@@ -13,7 +13,7 @@ $color-lightest: #f3f3f4;
 $color-white: #ffffff;
 $color-translucent: rgba(0,0,0,0.6);
 
-// Block Backgrounds
+// Backgrounds
 .has-blue-background-color{
   background: $color-blue;
 }
@@ -42,7 +42,31 @@ $color-translucent: rgba(0,0,0,0.6);
   background: $color-translucent;  
 }
 
-// Global Classes
-.has-lightest-background-color{
-
+// Colors
+.has-blue-color{
+  color: $color-blue;
+}
+.has-dark-color{
+  color: $color-dark;  
+}
+.has-darker-color{
+  color: $color-darker;  
+}
+.has-black-color{
+  color: $color-black;  
+}
+.has-light-color{
+  color: $color-light;  
+}
+.has-lighter-color{
+  color: $color-lighter  
+}
+.has-lightest-color{
+  color: $color-lightest;  
+}
+.has-white-color{
+  color: $color-white;  
+}
+.has-translucent-color{
+  color: $color-translucent;  
 }

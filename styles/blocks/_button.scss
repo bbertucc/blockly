@@ -12,4 +12,22 @@
   // Button Link
   a{}
 
+  // Special Hacks for alignment
+  &.alignright{
+    float: none;
+    a{
+      float: right;
+      padding-left: 1em;
+      max-width: 300px;
+    }
+  }
+  &.alignleft{
+    float: none;
+    a{
+      float: left;
+      padding-right: 1em;
+      max-width: 300px;
+    }
+  }
+
 }

@@ -5,6 +5,7 @@
   border-top: 4px solid $color-light;
   border-bottom: 4px solid $color-light;
   color: $color-light;
+  @include alignStandard();
 
   // Blockquote
   blockquote{

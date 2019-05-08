@@ -2,33 +2,60 @@
 # Single Content Layout (layouts/single.php)
 --------------------------------------------------------------*/
 .layout-single{
+  display: flex;
+  @media only screen and (max-width: $screen-tablet) {
+    flex-wrap: wrap;
+  }
+
+  // Sidebar
+  .single-sidebar{
+    width: 25%;
+    min-width: 18*$cell-standard;
+    border-right: 1px solid $color-light;
+    @media only screen and (max-width: $screen-tablet) {
+      width: 100%;
+      order: 2;
+      border-right: none;
+      border-top: 1px solid $color-light;
+    }
+  }
+  
+  // Loop & Error
+  .single-loop, .single-error{
+    margin: 0 auto;
+    width: 100%;
+  }
 
   // Loop
   .single-loop{
-    max-width: $container-standard;
-    margin: 0 auto;
-    
+
     // Title
     .loop-the_title{
       font: $font-h1;
-      padding: $cell-standard 0 0;
+      padding: $cell-standard 0;
+      @include alignStandard();
     }
 
     // The Content
-    .loop-the_content{}
+    .loop-the_content{
+      
+      // Guttenberg Alignment Hack
+      & > *  {
+        @include alignStandard();
+      }
+
+    }
   
   }
 
   // Error
   .single-error{
-    max-width: $screen-tablet;
-    padding: $cell-standard*2 $cell-standard/2;
-    margin: 0 auto;
     text-align: center;
+    padding-bottom: $cell-standard*2;
       
     // Title
     .error-title{
-      font: $font-h2;
+      font: $font-h3;
     }
     
     // Body

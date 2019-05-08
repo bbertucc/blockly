@@ -3,10 +3,16 @@
 --------------------------------------------------------------*/
 .layout-404{
   background: $color-lightest;
-  padding-bottom: $cell-standard*2;
+  display: flex;
+  @media only screen and (max-width: $screen-tablet) {
+    flex-wrap: wrap;
+  }
 
   // Error Message
   [class="404-error_message"]{
+    max-width: $container-standard;
+    margin: 0 auto;
+    width: 100%;
     padding: $cell-standard*2 0;
 
     text-align: center;
@@ -19,6 +25,16 @@
   }
 
   // Sidebar
-  [class="404-sidebar"]{}
+  [class="404-sidebar"]{
+    width: 25%;
+    min-width: 18*$cell-standard;
+    border-right: 1px solid $color-light;
+    @media only screen and (max-width: $screen-tablet) {
+      width: 100%;
+      order: 2;
+      border-right: none;
+      border-top: 1px solid $color-light;
+    }
+  }
 
 }

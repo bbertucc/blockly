@@ -1,6 +1,13 @@
 /*--------------------------------------------------------------
 # Global Alignments (Including Block Alignments)
 --------------------------------------------------------------*/
+// Mixins
+@mixin alignStandard {
+  max-width: $container-standard;  
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 // Classes
 .loop-the_content{ // Hack to fix WP alignment bug
@@ -9,32 +16,22 @@
   }
   .alignright{
     float: right;
-    margin-left: 1em;
+    padding-left: 1em;
   }
   .alignleft{
     float: left;
-    margin-right: 1em;
+    padding-right: 1em;
   }
   .aligncenter{
     max-width: $container-standard;
-    margin: $cell-standard*2 auto;
+    margin: $cell-standard auto;
   }
   .alignwide{
-    width: 100vw;
-    max-width: $container-wide;
-    margin: $cell-standard*2 calc( calc(#{$container-standard} - #{$container-wide})/2);
-    @media only screen and (max-width: $container-wide) {
-      margin: $cell-standard*2 calc( calc(#{$container-standard} - 100vw)/2);
-    }
+    width: 100% !important;
+    max-width: $container-wide !important;
   }
   .alignfull{
-    width: 100vw;
-    max-width: $container-full;
-    margin: $cell-standard*2 calc( calc(#{$container-standard} - #{$container-full})/2);
-  }
-  @media only screen and (max-width: $container-standard) {
-    .alignwide, .alignfull{
-      margin: $cell-standard*2 0;
-    }
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }

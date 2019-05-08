@@ -6,7 +6,7 @@
 // registered here.
 // =====================================================================
 function theme_customizer_register( $wp_customize ) {
-    
+  
   // Add Controls & Settings to Existing Sections
   $wp_customize->add_setting( 'theme_logo' );
   $wp_customize->add_setting( 'theme_copyright_info' );
@@ -27,7 +27,7 @@ function theme_customizer_register( $wp_customize ) {
     )
   );
 
-  // Add "Embed Codes" Section, Controls and Settings  
+  // Add "Theme Embed Codes" Section, Controls and Settings  
   $wp_customize->add_section( 'theme_embed_codes', array(
       'title' => __('Theme Embed Codes', 'blockly'),
       'description' => __('Tracking pixels, analytics codes, ..', 'blockly'),
@@ -48,6 +48,47 @@ function theme_customizer_register( $wp_customize ) {
       'label' => 'Code after Footer',
       'section' => 'embed_codes',
       'type' => 'textarea',
+    )
+  );
+
+  // Add "Theme Header" Section, Controls and Settings  
+  $wp_customize->add_section( 'theme_header', array(
+    'title' => __('Theme Header', 'blockly'),
+    'description' => __('Settings for the theme\'s header.', 'blockly'),
+    'priority' => 38,
+  )
+  );
+  $wp_customize->add_setting( 'theme_header_action' );
+  $wp_customize->add_setting( 'theme_header_button_url' );
+  $wp_customize->add_setting( 'theme_header_button_text' ); 
+  $wp_customize->add_control( 'theme_header_action',
+    array(
+      'label' => 'Header Action',
+      'section' => 'theme_header',
+      'type'    => 'select',
+      'transport' => 'postMessage',
+      'choices' => array(
+          'none' => 'None',
+          'button' => 'Button',
+          'search' => 'Search'
+      )
+    )
+  );
+  $wp_customize->add_control( 'theme_header_button_text',
+    array(
+      'label' => 'Header Action URL',
+      'section' => 'theme_header',
+      'transport' => 'postMessage',
+      'type'    => 'input'
+
+    )
+  );
+  $wp_customize->add_control( 'theme_header_button_url',
+    array(
+      'label' => 'Header Button Text',
+      'section' => 'theme_header',
+      'transport' => 'postMessage',
+      'type'    => 'input'
     )
   );
   
