@@ -28,10 +28,6 @@
   <?php
   // End .footer element
   endif;
-
-  // Footer Embed Codes
-  if( get_theme_mod('theme_footer_code') ) 
-    echo get_theme_mod('theme_footer_code');
   ?>
   
 </body>

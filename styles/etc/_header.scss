@@ -4,11 +4,11 @@
 .header {
   text-align: center;
   border-bottom: 1px solid $color-light;
-  padding-top: $cell-standard*2;
+  padding: 0 $cell-standard/2;
 
   // Logo (Optional)
   .header-logo{
-    margin-bottom: $cell-standard;
+    margin: $cell-standard 0;
     .logo-link{
       .link-image{}
     }
@@ -19,7 +19,7 @@
     display: block;
     color: $color-darker;
     text-decoration: none;
-    margin-bottom: $cell-standard*2;
+    margin: $cell-standard*2 $cell-standard/2;
     .title_and_tagline-title{
       font: $font-h1;
       line-height: 1em;
@@ -33,40 +33,110 @@
 
   // Navigation
   .header-menu{
-    border-top: 1px solid $color-lighter;
     margin: 0;
-    display: flex;
-    list-style: none;
     padding: 0;
+    display: inline-flex;
+    list-style: none;
     justify-content: center;
+    align-items: center;
     @media only screen and (max-width: $screen-tablet){
       display: none;
     }
     .menu-item{
-      margin: 0;
-      border-right: 1px solid $color-lighter;
-      &:first-of-type{
-        border-left: 1px solid $color-lighter;
-      }
+      margin: 0 $cell-standard;
+      padding: $cell-standard/2 0;
+      border-bottom: 4px solid transparent;
       &.current_page_item{
+        border-color: $color-light;
         a{
-          background: $color-lighter;
-          color: $color-white;
+          color: $color-light;
           &:hover{
-            background: $color-lighter;
+            text-decoration: none;
           }
         }
       }
       a{
         display: block;
-        padding: $cell-standard/2 $cell-standard;
         text-decoration: none;
-        transition: .2s background;
         font: $font-medium_p;
         font-weight: $font-weight-bold;
         &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Navigation with Button
+  .header-button_addon{
+    display: inline-block;
+    color: $color-white;
+    background: $color-blue;
+    padding: $cell-standard/2 $cell-standard;
+    margin-left: $cell-standard/2;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    @media only screen and (max-width: $screen-tablet){
+      width: 100%;
+      margin: 0 0 $cell-standard 0; 
+      max-width: $container-standard;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  // Search Form
+  .header-search_form{
+    display: inline-flex;
+    align-items: center;
+    margin-left: $cell-standard/2;
+    .search_form-input, .search_form-submit{
+      font: $font-small_p;
+      line-height: 1;
+    }
+    .search_form-input{
+      padding: $cell-standard/2;
+      max-width: $cell-standard*10;
+    }
+    .search_form-submit{
+      border-width: 1px;
+      padding: $cell-standard/2 11px;
+      border-radius: 0 4px 4px 0;
+      &:hover{
+        background: $color-blue;
+      }
+      .submit-icon{
+        width: 16px;
+        height: 16px;
+      }
+    }
+    @media only screen and (max-width: $screen-tablet){
+      margin: 0 auto $cell-standard auto;
+      width: 100%;
+      max-width: $container-standard;
+      .search_form-input, .search_form-submit{
+        font: $font-medium_p;
+        line-height: 1;
+      }
+      .search_form-input{
+        padding: $cell-standard/2;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 4px 0 0 4px;
+      }
+      .search_form-submit{
+        width: 10%;
+        border-width: 1px;
+        padding: $cell-standard/2 11px;
+        &:hover{
           background: $color-blue;
-          color: $color-white;
+        }
+        .submit-icon{
+          width: 20px;
+          height: 20px;
         }
       }
     }
@@ -75,11 +145,54 @@
   // Toggle
   .header-toggle{
     display: none;
+    position: relative;
     @media only screen and (max-width: $screen-tablet){
-      display: block;
+      cursor: pointer;
+      background: $color-light;
+      display: inline-block;
+      height: $cell-standard*3;
+      width: 100%;
+      max-width: $container-standard;
+      border-radius: 4px;
     }
-    &:before{
-      content: 'Menu'
+    .toggle-icon, .toggle-icon:before, .toggle-icon:after{
+      position: absolute;
+      width: 40px;
+      height: 4px;
+      transition-timing-function: ease;
+      transition-duration: .15s;
+      transition-property: transform;
+      border-radius: 4px;
+      background-color: $color-white;
+    }
+    .toggle-icon{
+      display: inline-block;
+      top: 50%;
+      margin-top: -2px;
+      margin-left: -20px;
+      transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+      transition-duration: 75ms;
+      width: 40px;
+      height: 4px;
+      &:before, &:after{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        transition-timing-function: ease;
+        transition-duration: .15s;
+        transition-property: transform;
+        border-radius: 4px;
+      }
+      &:before{
+        transition: top 75ms ease .12s,opacity 75ms ease;
+        top: -10px;
+      }
+      &:after{
+        transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+        bottom: -10px;
+      }
     }
   }
 
@@ -88,16 +201,50 @@
     
     // Toggle
     .header-toggle{
-      &:before{
-        content: "Close Menu"
+      border-radius: 4px 4px 0 0;
+      .toggle-icon{
+        transition-delay: .12s;
+        transition-timing-function: cubic-bezier(.215,.61,.355,1);
+        transform: rotate(45deg);
+        background-color: $color-white;
+        &:before, &:after{
+          background-color: $color-white;
+
+        }
+        &:before{
+          top: 0;
+          transition: top 75ms ease,opacity 75ms ease .12s;
+          opacity: 0;
+        }
+        &:after{
+          bottom: 0;
+          transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+          transform: rotate(-90deg);
+        }
       }
     }
     
     // Menu
     .header-menu{
       display: block;
+      background: $color-lighter;
+      margin: -#{$cell-standard/2} auto $cell-standard/2 auto;
+      border-radius: 0 0 4px 4px;
+      max-width: $container-standard;
+      width: 100%;
       .menu-item{
-        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        a{
+          display: block;
+          padding: $cell-standard/2;
+          color: $color-white;
+          border-bottom: 1px solid $color-white;
+          &:hover{
+            text-decoration: none;
+          }
+        }
         &:first-of-type{}
       }
     }

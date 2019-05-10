@@ -18,6 +18,9 @@ Lots of thought went into Blockly's structure. Checkout [/styles]. We're being e
 ### Required Plug-ins
 To run Blockly properly, you'll need version of WordPress. [Advanced Custom Fields] is also required to hide and show content titles. You also will need a SASS compiler to generate CSS from the SCSS. 
 
+### Custom Fields
+Blockly includes a few features, not usually included with themes. First, you can add an action button or search form to the menu with a "Header Menu" display location. You can also hide or show content tiles by toggling the "Hide title?" meta field when editing a post. Both these features rely on [Advanced Custom Fields].
+
 ### Contributing
 This is an open repo! Add [Issues], [Fork], watch and contribute.
 

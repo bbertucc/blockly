@@ -4,7 +4,7 @@
   $( window ).load(function() {
   
     //Search for Header Navigation
-    $('.header-content').each(function() {
+    $('.header').each(function() {
       var headerContent = this;
       $(headerContent).themeHeaderNavigation();
     });

@@ -33,8 +33,12 @@ form{
       outline: none;
     }
   }
+  input{
+    line-height: 1;
+  }
   input[type=submit], button{
-    font: $font-medium_p;
+    font-weight: $font-weight-bold;
+    line-height: 1;
     font-weight: $font-weight-bold;
     color: $color-white;
     background: $color-blue;
@@ -47,7 +51,9 @@ form{
       background: transparent;
       color: $color-blue;
     }
-
+    &:active{
+      opacity: .8;
+    }
   }
 }
 table{}

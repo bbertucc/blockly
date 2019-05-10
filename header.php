@@ -19,12 +19,6 @@
   
   <body <?php body_class(); ?>>
     
-    <?php
-    // Header Embed Codes
-    if(get_theme_mod( 'theme_header_code' ) ) 
-      echo get_theme_mod( 'theme_header_code' );
-    ?>
-    
     <div class="header">  
         
         <?php        
@@ -66,14 +60,32 @@
         if(has_nav_menu('header_menu')):
         ?>
         
-          <a class="header-toggle" id="header_menu_toggle"> Menu</a>
+          <a class="header-toggle" id="header_menu_toggle"><span class="toggle-icon"></span></a>
           
           <?php
-          // Header Navigation
-          wp_nav_menu('menu_id=header_navigation&container=&menu_class=header-menu&theme_location=header_menu&depth=1');
-          ?>
+          // Header Menu
+          wp_nav_menu('menu_id=header_menu&container=&menu_class=header-menu&theme_location=header_menu&depth=1');
+          $menu_id = wp_get_nav_menu_object('Header Menu');
 
-        <?php
+          // Button Addon
+          if(get_field('menu_addons', $menu_id) == 'button')
+            echo '<a class="header-button_addon" href="'.get_field('button_url', $menu_id).'">'.get_field('button_text', $menu_id).'</a>';
+          
+          // Begin Search Form Addon
+          if(get_field('menu_addons', $menu_id) == 'search_form'):
+          ?>
+          
+          <form class="header-search_form" id="searchform" action="<?php echo get_site_url();?>" method="get">
+            <input class="search_form-input" type="text" name="s" id="s" placeholder="Search..">
+            <button class="search_form-submit">
+              <img class="submit-icon" src="<?php echo get_template_directory_uri();?>/images/icon-search.svg">
+            </button>
+          </form>
+            
+          <?php
+          // End Search Form Addon
+          endif;
+
         // End Header Menu
         endif;
         ?>
