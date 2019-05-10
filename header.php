@@ -65,7 +65,7 @@
           <?php
           // Header Menu
           wp_nav_menu('menu_id=header_menu&container=&menu_class=header-menu&theme_location=header_menu&depth=1');
-          $menu_id = wp_get_nav_menu_object('Header Menu');
+          $menu_id = wp_get_nav_menu_object(get_nav_menu_locations()['header_menu']);
 
           // Button Addon
           if(get_field('menu_addons', $menu_id) == 'button')
