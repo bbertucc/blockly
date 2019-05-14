@@ -46,7 +46,7 @@
       margin: 0 $cell-standard;
       padding: $cell-standard/2 0;
       border-bottom: 4px solid transparent;
-      &.current_page_item{
+      &.current_page_item, &.current-menu-item{
         border-color: $color-light;
         a{
           color: $color-light;

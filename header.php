@@ -76,7 +76,7 @@
           ?>
           
           <form class="header-search_form" id="searchform" action="<?php echo get_site_url();?>" method="get">
-            <input class="search_form-input" type="text" name="s" id="s" placeholder="Search..">
+            <input class="search_form-input" type="text" name="s" id="s" placeholder="Search.." value="<?php the_search_query(); ?>"> 
             <button class="search_form-submit">
               <img class="submit-icon" src="<?php echo get_template_directory_uri();?>/images/icon-search.svg">
             </button>

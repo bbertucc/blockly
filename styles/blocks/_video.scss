@@ -4,7 +4,9 @@
 .wp-block-video{
  
   // Video Element
-  video{}
+  video{
+    width: 100%;
+  }
 
   // Caption Element
   figcaption{}

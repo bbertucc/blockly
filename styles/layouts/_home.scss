@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
-# Archive Layout (layouts/archive.php)
+# Home Layout (layouts/home.php)
 --------------------------------------------------------------*/
-.layout-archive{
+.layout-home{
   display: flex;
   background: $color-lightest;
   @media only screen and (max-width: $screen-tablet) {
@@ -9,7 +9,7 @@
   }
 
   // Sidebar
-  .archive-sidebar{
+  .home-sidebar{
     width: 25%;
     min-width: 18*$cell-standard;
     border-right: 1px solid $color-light;
@@ -23,21 +23,9 @@
   }
 
   // Content
-  .archive-content{
+  .home-content{
     width: 100%;
     padding-bottom: $cell-standard*2;
-    
-    // Archive Title  
-    .content-title{
-      font: $font-h1;
-      line-height: 1;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      align-items: flex-end;
-      width: 100%;
-      padding: $cell-standard*2 0 $cell-standard;
-    }
     
     // Loop and Error
     .content-loop, .content-error{
@@ -113,6 +101,5 @@
     }
   
   }
-
 
 }

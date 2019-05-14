@@ -28,11 +28,12 @@
 
   // Loop
   .single-loop{
+    padding: $cell-standard*2 0;
 
     // Title
     .loop-the_title{
       font: $font-h1;
-      padding: $cell-standard 0;
+      padding-bottom: $cell-standard;
       @include alignStandard();
     }
 

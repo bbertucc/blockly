@@ -1,16 +1,15 @@
 <?php
 // =====================================================================
-// ARCHIVE
+// Home
 // =====================================================================
-// The archive layout for posts, search results, and everything else 
-// the archive catches.
+// The layout for the blog homepage.
 // =====================================================================
 
-// Begin Archive Layout
-if( is_archive()  || is_search() ):
+// Begin Home Layout
+if( is_home() ):
 ?>
 
-<div class="layout-archive">
+<div class="layout-home">
 
   <?php
   // Begin Sidebar (if theme has widgets)
@@ -29,29 +28,13 @@ if( is_archive()  || is_search() ):
   <?php
   // End Sidebar
   endif;
-  ?>
 
-  <div class="archive-content">
-
-  <?php
-  // Search Title
-  if(is_search()){
-  
-    // The Posts Page Title
-    echo '<div class="content-title">Search: "'.get_search_query().'"</div>';
-
-  }else{
-
-    // Archive Title
-    if(!is_front_page())
-      the_archive_title('<div class="content-title">', '</div>');
-
-  }
 
   // Start Archive Loop
   if(have_posts()):
   ?>
-  
+
+  <div class="home-content">  
     <div class="content-loop">
       
       <?php 

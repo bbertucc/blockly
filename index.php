@@ -11,6 +11,7 @@ get_header();
 // Standard Layouts
 get_template_part('layouts/single');
 get_template_part('layouts/archive');
+get_template_part('layouts/home');
 get_template_part('layouts/404');
 
 // Footer
