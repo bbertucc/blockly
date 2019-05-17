@@ -2,17 +2,23 @@
 # Group Block
 --------------------------------------------------------------*/
 .wp-block-group{
+  padding: $cell-standard 0;
   
   // All Children
   & > *{
     max-width: $container-standard;
     margin: $cell-standard auto;
-    padding: $cell-standard 0;
   }
 
   // Hack to allow nested block spacing in editor.
   .block-editor-inner-blocks{
     max-width: inherit;
+  }
+
+  // Hack for nested full width content to reach the edge
+  .alignfull{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 
 }

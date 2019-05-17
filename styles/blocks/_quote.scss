@@ -2,16 +2,22 @@
 # Quote Block
 --------------------------------------------------------------*/
 .wp-block-quote{
+  border-left: 4px solid $color-light;
+  padding: 0 $cell-standard;
 
   // Large Style
   &.is-style-large{
-    margin: $cell-standard auto;
+    margin: 0 $cell-standard;
+    border-left: 0;
   }
 
   // Paragraph
   p{}
 
   // Citation
-  cite{}
+  cite{
+    font: $font-small_p !important;
+    color: $color-lighter;
+  }
 
 }

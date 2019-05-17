@@ -7,6 +7,10 @@
   img{}
 
   // Caption Element
-  figcaption{}
+  figcaption{
+    font: $font-small_p;
+    text-align: center;
+    color: $color-lighter;
+  }
 
 }
