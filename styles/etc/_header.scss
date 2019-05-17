@@ -3,14 +3,18 @@
 --------------------------------------------------------------*/
 .header {
   text-align: center;
-  border-bottom: 1px solid $color-light;
+  box-shadow: 0 3px 14px rgba(0,0,0,.15);
   padding: 0 $cell-standard/2;
 
   // Logo (Optional)
   .header-logo{
-    margin: $cell-standard 0;
+    padding: $cell-standard*2 $cell-standard/2;
+    text-align: center;
     .logo-link{
-      .link-image{}
+      .link-image{
+        max-height: 111px;
+        width: auto;
+      }
     }
   }
 
@@ -19,7 +23,7 @@
     display: block;
     color: $color-darker;
     text-decoration: none;
-    margin: $cell-standard*2 $cell-standard/2;
+    padding: $cell-standard*2 $cell-standard/2;
     .title_and_tagline-title{
       font: $font-h1;
       line-height: 1em;

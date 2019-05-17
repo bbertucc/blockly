@@ -1,7 +1,9 @@
 /*--------------------------------------------------------------
-# Post Archive Block
+# Latest Posts Block
 --------------------------------------------------------------*/
 ul.wp-block-latest-posts{
+  margin: 0;
+  padding: 0;
 
   // Has Dates
   .has-dates{}
@@ -29,8 +31,17 @@ ul.wp-block-latest-posts{
 
   // Post Element
   li{
+    margin-bottom: $cell-standard;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+    
     a{}
     time{}
+
+    // Excerpt or Content
+    div{}
+
   }
 
 }

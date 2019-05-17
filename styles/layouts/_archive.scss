@@ -2,41 +2,51 @@
 # Archive Layout (layouts/archive.php)
 --------------------------------------------------------------*/
 .layout-archive{
-  display: flex;
-  background: $color-lightest;
-  @media only screen and (max-width: $screen-tablet) {
-    flex-wrap: wrap;
-  }
-
-  // Sidebar
-  .archive-sidebar{
-    width: 25%;
-    min-width: 18*$cell-standard;
-    border-right: 1px solid $color-light;
-    background: $color-white;
-    @media only screen and (max-width: $screen-tablet) {
-      width: 100%;
-      order: 2;
-      border-right: none;
-      border-top: 1px solid $color-light;
-    }
-  }
-
+  
   // Content
   .archive-content{
     width: 100%;
-    padding-bottom: $cell-standard*2;
+    padding: $cell-standard*2 0 $cell-standard*3;
     
-    // Archive Title  
-    .content-title{
-      font: $font-h1;
-      line-height: 1;
-      display: flex;
-      text-align: center;
-      justify-content: center;
-      align-items: flex-end;
-      width: 100%;
-      padding: $cell-standard*2 0 $cell-standard;
+    // Masthead
+    .content-masthead{
+      padding: $cell-standard 0;
+
+      // All items
+      & > div{
+        max-width: 480px;
+        margin: 0 auto;
+        padding: $cell-standard/2 0;
+        text-align: center;
+      }
+
+      // Title  
+      .masthead-title{
+        font: $font-h1;
+        line-height: 1;
+      }
+
+      // Description  
+      .masthead-description{
+        font: $font-medium_p;
+        color: $color-light;
+        font-style: italic;
+      }
+
+      // Subcategories
+      .masthead-subcategories{
+        .subcategories-link{
+          display: inline-block;
+          font: $font-small_p;
+          font-weight: $font-weight-bold;
+          background: $color-blue;
+          padding: .5em 1em;
+          color: $color-white;
+          text-decoration: none;
+          border-radius: 4px;
+        }
+      }
+
     }
     
     // Loop and Error
@@ -50,14 +60,17 @@
 
       // Listed Post
       .loop-listed_post{
-        background: $color-white;
         margin-top: $cell-standard;
-        &:first-of-type{
-          margin-top: $cell-standard*2;
+        &:before{
+          content: '';
+          display: block;
+          margin: $cell-standard*3 auto;
+          width: 100px;
+          height: 2px;
+          background: $color-lighter
         }
         .listed_post-image{}
         .listed_post-post{
-          padding: $cell-standard;
           .post-meta{
             font: $font-small_p;
             a{
@@ -113,6 +126,5 @@
     }
   
   }
-
 
 }

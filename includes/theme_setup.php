@@ -29,18 +29,6 @@ function theme_content_width() {
 }
 add_action( 'after_setup_theme', 'theme_content_width', 0 );
 
-// Set excerpt display.
-function theme_excerpt_more( $more ) {
-  return '...';
-}
-add_filter( 'excerpt_more', 'theme_excerpt_more' );
-
-// Set excerpt length.
-function theme_custom_excerpt_length( $length ) {
-  return 18;
-}
-add_filter( 'excerpt_length', 'theme_custom_excerpt_length' );
-
 // Add responsive container to embeds
 function alx_embed_html( $html ) {
   return '<div class="video-container">' . $html . '</div>';

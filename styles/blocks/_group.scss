@@ -2,12 +2,12 @@
 # Group Block
 --------------------------------------------------------------*/
 .wp-block-group{
-  padding: 1px 0;
   
   // All Children
   & > *{
     max-width: $container-standard;
     margin: $cell-standard auto;
+    padding: $cell-standard 0;
   }
 
   // Hack to allow nested block spacing in editor.

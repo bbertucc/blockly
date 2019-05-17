@@ -2,23 +2,6 @@
 # Single Content Layout (layouts/single.php)
 --------------------------------------------------------------*/
 .layout-single{
-  display: flex;
-  @media only screen and (max-width: $screen-tablet) {
-    flex-wrap: wrap;
-  }
-
-  // Sidebar
-  .single-sidebar{
-    width: 25%;
-    min-width: 18*$cell-standard;
-    border-right: 1px solid $color-light;
-    @media only screen and (max-width: $screen-tablet) {
-      width: 100%;
-      order: 2;
-      border-right: none;
-      border-top: 1px solid $color-light;
-    }
-  }
   
   // Loop & Error
   .single-loop, .single-error{
@@ -43,6 +26,9 @@
       // Guttenberg Alignment Hack
       & > *  {
         @include alignStandard();
+        &:last-of-type{
+          margin-bottom: 0;
+        }
       }
 
     }

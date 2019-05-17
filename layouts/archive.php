@@ -7,51 +7,53 @@
 // =====================================================================
 
 // Begin Archive Layout
-if( is_archive()  || is_search() ):
+if( is_home() || is_archive() || is_search() || is_date() ):
 ?>
 
 <div class="layout-archive">
 
   <?php
-  // Begin Sidebar (if theme has widgets)
-  if ( is_active_sidebar( 'primary' ) ):
-  ?>
-  
-  <div class="archive-sidebar">
-
-    <?php
-    // Primary Sidebar (sidebar.php)
-    get_sidebar('primary');
-    ?>
-    
-  </div>
-  
-  <?php
-  // End Sidebar
-  endif;
+  // Set content depending on archive type
+  if( is_category() || is_tag() ){
+    $archive_title       = get_queried_object()->name;
+    $archive_description = get_queried_object()->description;
+    $subcategories       = get_categories( array('child_of' => get_queried_object()->term_id) );
+  }elseif(is_author()){
+    $archive_title       = get_queried_object()->display_name;
+    $archive_description = get_the_author_meta('description', get_queried_object()->ID);
+  }elseif(is_search()){
+    $archive_title       = 'Search Results: "' . get_search_query() . '"';
+  }elseif(is_home()){
+    $archive_title       = 'Recent Posts';
+    $archive_description = 'A full list of ViaNolaVie\'s most recent posts.';
+  }
   ?>
 
   <div class="archive-content">
 
-  <?php
-  // Search Title
-  if(is_search()){
-  
-    // The Posts Page Title
-    echo '<div class="content-title">Search: "'.get_search_query().'"</div>';
+    <?php
+    // Begin Masthead
+    if( !empty($archive_title) || !empty($archive_description) || !empty($subcategories) ):
+    ?>
 
-  }else{
+    <div class="content-masthead">
 
-    // Archive Title
-    if(!is_front_page())
-      the_archive_title('<div class="content-title">', '</div>');
+      <?php
+      // Masthead Content
+      if(!empty($archive_title))
+        echo '<div class="masthead-title">' . $archive_title . '</div>';
+      if(!empty($archive_description))
+        echo '<div class="masthead-description">' . $archive_description . '</div>';
+      if(!empty($subcategories)){
+        echo '<div class="masthead-subcategories">';
+        foreach($subcategories as $subcategory) { 
+          echo '<a class="subcategories-link" href="' . get_category_link( $subcategory->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $subcategory->name ) . '" ' . '>' . $subcategory->name.'</a> ';
+        }
+        echo '</div>';      
+      }
+      ?>
 
-  }
-
-  // Start Archive Loop
-  if(have_posts()):
-  ?>
-  
+    </div>
     <div class="content-loop">
       
       <?php 

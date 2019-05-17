@@ -26,6 +26,6 @@ require_once('includes/admin_notices.php' );
 // ACF Settings
 require_once('includes/acf_settings.php' );
 
-// Sidebars and Widgets
-require_once('includes/sidebars_and_widgets.php' );
+// Widget Settings
+require_once('includes/widget_settings.php' );
 ?>

@@ -2,11 +2,6 @@
 # 404 Layout (layouts/404.php)
 --------------------------------------------------------------*/
 .layout-404{
-  background: $color-lightest;
-  display: flex;
-  @media only screen and (max-width: $screen-tablet) {
-    flex-wrap: wrap;
-  }
 
   // Error Message
   [class="404-error_message"]{
@@ -21,19 +16,6 @@
     }
     .error_message-body{
       font: $font-medium_p;
-    }
-  }
-
-  // Sidebar
-  [class="404-sidebar"]{
-    width: 25%;
-    min-width: 18*$cell-standard;
-    border-right: 1px solid $color-light;
-    @media only screen and (max-width: $screen-tablet) {
-      width: 100%;
-      order: 2;
-      border-right: none;
-      border-top: 1px solid $color-light;
     }
   }
 

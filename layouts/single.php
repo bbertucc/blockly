@@ -12,24 +12,6 @@ if( is_single() || is_singular() ):
 <div class="layout-single">
 
   <?php 
-
-  // Begin Sidebar (if theme has widgets)
-  if ( is_active_sidebar( 'primary' ) ):
-  ?>
-  
-    <div class="single-sidebar">
-  
-      <?php
-      // Primary Sidebar (sidebar.php)
-      get_sidebar('primary');
-      ?>
-      
-    </div>
-  
-  <?php
-  // End Sidebar
-  endif;
-    
   // Begin Loop
   if(have_posts()): while(have_posts()): the_post();
   ?>
