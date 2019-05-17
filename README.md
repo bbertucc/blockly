@@ -3,9 +3,9 @@
 Blockly is a WordPress starter theme built to support "Gutenberg" editor blocks. Like [_s], this is a starter theme. You don't need to add a child theme - just start hacking!
 
 ### Theme Highlights
-- *Gutenberg Ready*: This theme is made for WordPress’s [Gutenberg] block editor. Every block has it's own `.scss` file. Checkout [/styles/blocks].
-- *Extenable Structure*: Styles, scripts and PHP includes are organized so you can easily add particular content you need.
-- *SASS-ready*: Key theme parts are segmented into corresponding SASS files.
+- **Gutenberg Ready**: This theme is made for WordPress’s [Gutenberg] block editor. Every block has it's own `.scss` file. Checkout [/styles/blocks].
+- **Extenable Structure**: Styles, scripts and PHP includes are organized so you can easily add particular content you need.
+- **SASS-ready**: Key theme parts are segmented into corresponding SASS files.
 
 ### Getting Started
 1. Install.
@@ -27,7 +27,7 @@ This is an open repo! Add [Issues], [Fork], watch and contribute.
 ### Issue Reporting and Questions
 Issues and questions can be added under my open repo's [Issues] tab. 
 
-This theme is currently developed by me, [@bbertucc], and my company, [Decubing].
+This theme is currently developed by me, [@bbertucc], and folks in my company, [Decubing].
 
 Happy hacking!
 
