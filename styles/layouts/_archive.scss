@@ -10,8 +10,15 @@
     
     // Masthead
     .content-masthead{
-      padding: $cell-standard 0;
-
+      padding: $cell-standard 0 0;
+      &:after{
+        content: '';
+        display: block;
+        margin: $cell-standard*3 auto;
+        width: 100px;
+        height: 2px;
+        background: $color-lighter
+      }
       // All items
       & > div{
         max-width: 480px;
