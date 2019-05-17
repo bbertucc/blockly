@@ -18,7 +18,6 @@
   </head>
   
   <body <?php body_class(); ?>>
-    
     <div class="header">  
         
         <?php        
@@ -45,11 +44,13 @@
             <?php bloginfo('title'); ?>
 
           </div>
-          <div class="title_and_tagline-tagline">
 
-            <?php bloginfo('description'); ?>
+          <?php
+          // Tagline
+          if( !empty( get_bloginfo('description') ) )
+            echo '<div class="title_and_tagline-tagline"' . get_bloginfo('description') . '</div>'; 
+          ?>
 
-          </div>
         </a>
 
         <?php

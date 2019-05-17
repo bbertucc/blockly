@@ -23,13 +23,10 @@
     // The Content
     .loop-the_content{
       padding: 0 $cell-standard;
-
+      
       // Guttenberg Alignment Hack
       & > *  {
         @include alignStandard();
-        &:last-of-type{
-          margin-bottom: 0;
-        }
       }
 
     }

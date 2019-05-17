@@ -2,6 +2,7 @@
 # Button Block
 --------------------------------------------------------------*/
 .wp-block-button{
+  margin: $cell-standard 0;
 
   // Outlined Style
   &.is-style-outline{}
