@@ -32,6 +32,51 @@
       }
 
     }
+
+    // Meta
+    .loop-meta{
+      width: $container-standard;
+      margin: $cell-standard auto;
+      color: $color-lighter;
+      &:before{
+        content: '';
+        display: block;
+        margin: $cell-standard*3 auto;
+        width: 100px;
+        height: 2px;
+        background: $color-lighter
+      }
+      
+      // All links
+      a{
+        color: $color-lighter;
+      }
+
+      // All icons
+      svg{
+        fill: $color-lighter;
+        margin-right: 3px;
+      }
+
+      // Author Meta
+      .meta-author{
+        margin-right: $cell-standard;
+        .categories-icon{}
+      }
+      
+      // Date
+      .meta-date{
+        margin-right: $cell-standard;
+        .date-icon{}
+      }
+
+      // Categories
+      .meta-categories{
+        .date-icon{}
+        .categories-the_category{}
+      }
+
+    }
   
   }
 
