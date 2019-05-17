@@ -8,7 +8,20 @@
   flex-wrap: wrap;
   max-width: $container-wide;
   margin: 0 auto;
-  padding: $cell-standard*2 0;
+  padding: $cell-standard*4 0;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    display: block;
+    margin: $cell-standard*3 auto;
+    width: 100px;
+    margin-left: -50px;
+    top: -#{$cell-standard*2};
+    left: 50%;
+    height: 2px;
+    background: $color-lighter;
+  }
 }
 
 // Widget

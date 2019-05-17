@@ -23,9 +23,6 @@ if( is_home() || is_archive() || is_search() || is_date() ):
     $archive_description = get_the_author_meta('description', get_queried_object()->ID);
   }elseif(is_search()){
     $archive_title       = 'Search Results: "' . get_search_query() . '"';
-  }elseif(is_home()){
-    $archive_title       = 'Recent Posts';
-    $archive_description = 'A full list of ViaNolaVie\'s most recent posts.';
   }
   ?>
 
@@ -54,6 +51,15 @@ if( is_home() || is_archive() || is_search() || is_date() ):
       ?>
 
     </div>
+    
+    <?php
+    // End Masthead
+    endif;
+
+    // Begin Loop
+    if( have_posts() ):
+    ?>
+
     <div class="content-loop">
       
       <?php 
@@ -102,8 +108,8 @@ if( is_home() || is_archive() || is_search() || is_date() ):
       wp_link_pages();
 
       // Start Pagination
-      $prev_link = get_previous_posts_link(__('&laquo; Older Entries', 'blockly'));
-      $next_link = get_next_posts_link(__('Newer Entries &raquo;', 'blockly'));
+      $prev_link = get_previous_posts_link(__('&laquo; Older Entries', 'tu-boilerplate-gutenberg'));
+      $next_link = get_next_posts_link(__('Newer Entries &raquo;', 'tu-boilerplate-gutenberg'));
       if ($prev_link || $next_link):
       ?>
 

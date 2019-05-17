@@ -69,6 +69,9 @@
           height: 2px;
           background: $color-lighter
         }
+        &:first-of-type:before{
+          display: none;
+        }
         .listed_post-image{}
         .listed_post-post{
           .post-meta{
