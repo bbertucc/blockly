@@ -102,8 +102,8 @@ if( is_home() || is_archive() || is_search() || is_date() ):
       wp_link_pages();
 
       // Start Pagination
-      $prev_link = get_previous_posts_link(__('&laquo; Older Entries', 'tu-boilerplate-gutenberg'));
-      $next_link = get_next_posts_link(__('Newer Entries &raquo;', 'tu-boilerplate-gutenberg'));
+      $prev_link = get_previous_posts_link(__('&laquo; Older Entries', 'blockly'));
+      $next_link = get_next_posts_link(__('Newer Entries &raquo;', 'blockly'));
       if ($prev_link || $next_link):
       ?>
 

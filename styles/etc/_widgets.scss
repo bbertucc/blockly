@@ -2,14 +2,24 @@
 # Styles for registered widgets
 --------------------------------------------------------------*/
 
+// Widgets Parent
+.widgets{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: $container-wide;
+  margin: 0 auto;
+  padding: $cell-standard*2 0;
+}
+
 // Widget
 .widgets-widget{
-  padding: $cell-standard 0;
+  padding: $cell-standard;
   margin: 0 auto;
-  
+  width: 33.333333333%;
+
   // Title
   .widget-title{
-    font: $font-h4;
+    font: $font-h2;
   }
 
   // Lists

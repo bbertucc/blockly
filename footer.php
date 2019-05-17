@@ -7,31 +7,13 @@
 ?>
 
   <?php
-  // Begin .footer element, if has Navigation or Copyright Info
-  if( has_nav_menu('footer_menu') || get_theme_mod('theme_copyright_info') || (get_theme_mod('theme_tulane_attribution', 'none') != 'none') ):
+  // Begin .footer element if has Navigation. attribution or Copyright Info
+  if( has_nav_menu('footer_menu') || get_theme_mod('theme_copyright_info') ):
   ?>
 
   <div class="footer">
-
+  
     <?php
-
-    // Begin Footer Widgets (if theme has widgets)
-    if ( is_active_sidebar( 'footer_widgets' ) ):
-    ?>
-
-    <div class="footer-widgets">
-
-      <?php
-      // Footer Widgets (sidebar.php)
-      dynamic_sidebar( 'footer_widgets' );
-      ?>
-      
-    </div>
-
-    <?php
-    // End Footer Widgets
-    endif;
-
     // Footer Navigation
     if( has_nav_menu('footer_menu') )
       wp_nav_menu('menu_id=header_navigation&container=&menu_class=footer-menu&theme_location=footer_menu&depth=1');

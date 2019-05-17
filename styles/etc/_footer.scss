@@ -3,9 +3,9 @@
 --------------------------------------------------------------*/
 .footer{
   padding: $cell-standard*2;
-  border-top: 1px solid $color-lighter;
   text-align: center;
   font: $font-small_p;
+  border-top: 1px solid $color-lighter;
 
   // Copyright Info
   .footer-copyright_info{
