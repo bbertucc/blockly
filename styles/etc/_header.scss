@@ -107,6 +107,7 @@
     }
     .search_form-submit{
       border-width: 1px;
+      border-left: 0;
       padding: $cell-standard/2 11px;
       border-radius: 0 4px 4px 0;
       &:hover{

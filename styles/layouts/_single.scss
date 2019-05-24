@@ -2,6 +2,7 @@
 # Single Content Layout (layouts/single.php)
 --------------------------------------------------------------*/
 .layout-single{
+  padding-bottom: $cell-standard;
   
   // Loop & Error
   .single-loop, .single-error{
@@ -36,6 +37,8 @@
       width: $container-standard;
       margin: $cell-standard auto;
       color: $color-lighter;
+      margin: $cell-standard auto $cell-standard*2 auto;
+      text-align: center;
       &:before{
         content: '';
         display: block;

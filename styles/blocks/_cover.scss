@@ -18,13 +18,10 @@
     &:before{}
   }
 
-  // Content is left aligned
-  .has-left-content{}
-
-  // Content is right aligned
-  .has-right-content{}
-
-  // Cover Text Element
-  .wp-block-cover-text{}
+  // Cover Content Container
+  div{
+    max-width: $container-standard;
+    margin: 0 auto;
+  }
   
 }

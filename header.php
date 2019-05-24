@@ -48,7 +48,7 @@
           <?php
           // Tagline
           if( !empty( get_bloginfo('description') ) )
-            echo '<div class="title_and_tagline-tagline"' . get_bloginfo('description') . '</div>'; 
+            echo '<div class="title_and_tagline-tagline">' . get_bloginfo('description') . '</div>'; 
           ?>
 
         </a>
