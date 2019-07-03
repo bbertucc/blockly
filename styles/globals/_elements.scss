@@ -4,12 +4,16 @@
 *{
   box-sizing: border-box ;
 }
+
+body, .editor-styles-wrapper{
+  font: $font-regular_p;
+  color: $color-black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body{
   padding: 0;
   margin: 0;
-  font: $font-medium_p;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 img, a img{
   border: 0;
