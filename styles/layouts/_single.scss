@@ -2,7 +2,7 @@
 # Single Content Layout (layouts/single.php)
 --------------------------------------------------------------*/
 .layout-single{
-  
+
   // Loop & Error
   .single-loop, .single-error{
     margin: 0 auto;
@@ -11,12 +11,11 @@
 
   // Loop
   .single-loop{
-    padding: $cell-standard*2 0;
 
     // Title
     .loop-the_title{
       font: $font-h1;
-      padding-bottom: $cell-standard;
+      padding: $cell-standard*2 0 $cell-standard;
       @include alignStandard();
     }
 
@@ -34,10 +33,9 @@
     // Meta
     .loop-meta{
       width: $container-standard;
-      margin: $cell-standard auto;
-      color: $color-lighter;
       margin: $cell-standard auto $cell-standard*2 auto;
       text-align: center;
+      color: $color-lighter;
       &:before{
         content: '';
         display: block;
