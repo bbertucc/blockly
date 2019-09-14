@@ -13,6 +13,11 @@ p{
     font: $font-small_p !important;
   }
 
+  // Normal Paragraph
+  &.has-normal-font-size{
+    font: $font-normal_p !important;
+  }
+
   // Medium Paragraph
   &.has-medium-font-size{
     font: $font-medium_p !important;

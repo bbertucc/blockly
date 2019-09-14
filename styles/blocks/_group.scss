@@ -2,6 +2,11 @@
 # Group Block
 --------------------------------------------------------------*/
 .wp-block-group{
+  &.alignfull{
+    .wp-block-group__inner-container{
+      padding: $cell-standard 0;
+    }
+  }
 
   // Container
   .wp-block-group__inner-container{
